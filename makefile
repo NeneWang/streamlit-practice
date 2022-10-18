@@ -1,5 +1,11 @@
 start:
-	streamlit run .\stockapp.py
+	make lab2
+
+lab2:
+	cd dna && streamlit run 
+
+lab1:
+	cd d1_demos && streamlit run .\stockapp.py
 
 install:
 	pip install streamlit
