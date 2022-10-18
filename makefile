@@ -1,6 +1,12 @@
 start:
 	env
-	make lab5p
+	make click
+
+click_2:
+	make runst folder=d2 file=click_2
+
+click:
+	make runst folder=d2 file=onclick
 
 lab5p:
 	make runst folder=d2 file=sp500-personal

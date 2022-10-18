@@ -1,3 +1,5 @@
 lmxl
 streamlit
 seaborn
+
+streamlit_plotly_events
