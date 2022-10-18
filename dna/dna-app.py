@@ -66,7 +66,8 @@ def DNA_nucleotide_count(seq):
             ('A',seq.count('A')),
             ('T',seq.count('T')),
             ('G',seq.count('G')),
-            ('C',seq.count('C'))
+            ('C',seq.count('C')),
+            ('Others', 2)
             ])
   return d
 
@@ -107,3 +108,13 @@ p = p.properties(
 
 
 st.write(p)
+
+# pie = df.plot(kind="pie", y = 'count')
+
+# Doesn't work without 'quantitative' on it.
+pie = alt.Chart(df).mark_arc().encode(
+    theta=alt.Theta(field="count", type="quantitative"),
+    color=alt.Color(field="nucleotide")
+)
+
+st.write(pie)
