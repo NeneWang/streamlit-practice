@@ -14,6 +14,7 @@ tickerSymbolMSFT = 'MSFT'
 tickerData = yf.Ticker(tickerSymbol)
 tickerDataMSFT = yf.Ticker(tickerSymbolMSFT)
 
+
 #get the historical prices for this ticker
 tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
 tickerDfMSFT = tickerDataMSFT.history(period='1d', start='2010-5-31', end='2020-5-31')
