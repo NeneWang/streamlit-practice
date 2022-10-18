@@ -1,12 +1,12 @@
 start:
 	env
-	make lab2
+	make lab3
 
 lab3:
-	make runst folder=dna file=dna-app
+	make runst folder=d2 file=basketball_app
 	
 lab2:
-	make runst folder=dna file=dna-app
+	make runst folder=d2 file=dna-app
 
 lab1:
 	make runst folder=d1_demos file=stockapp
