@@ -1,6 +1,12 @@
 start:
 	env
-	make lab3
+	make lab5
+
+lab5:
+	make runst folder=d2 file=sp500
+
+lab4:
+	make runst folder=d2 file=football_app
 
 lab3:
 	make runst folder=d2 file=basketball_app
