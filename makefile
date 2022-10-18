@@ -1,6 +1,9 @@
 start:
 	env
-	make lab5
+	make lab5p
+
+lab5p:
+	make runst folder=d2 file=sp500-personal
 
 lab5:
 	make runst folder=d2 file=sp500
@@ -26,6 +29,9 @@ env:
 install:
 	pip install streamlit
 	pip install yfinance
+
+deploy-sample:
+	
 
 save:
 	git add --all
