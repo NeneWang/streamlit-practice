@@ -17,6 +17,7 @@ st.sidebar.header('User Input Features')
 selected_year = st.sidebar.selectbox('Year', list(reversed(range(1950,2020))))
 
 # Web scraping of NBA player stats
+# You can even st.cache the data!
 @st.cache
 def load_data(year):
     url = "https://www.basketball-reference.com/leagues/NBA_" + str(year) + "_per_game.html"
@@ -30,10 +31,12 @@ playerstats = load_data(selected_year)
 
 # Sidebar - Team selection
 sorted_unique_team = sorted(playerstats.Tm.unique())
-selected_team = st.sidebar.multiselect('Team', sorted_unique_team, sorted_unique_team)
+selected_team = st.sidebar.multiselect('Team', sorted_unique_team, sorted_unique_team[:1])
 
 # Sidebar - Position selection
 unique_pos = ['C','PF','SF','PG','SG']
+
+# So multiselect is the name, options, options_selected
 selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 
 # Filtering data
