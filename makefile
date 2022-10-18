@@ -3,10 +3,14 @@ start:
 	make lab2
 
 lab2:
-	cd dna && streamlit run dna-app.py
+	make runst folder=dna file=dna-app
 
 lab1:
-	cd d1_demos && streamlit run .\stockapp.py
+	make runst folder=d1_demos file=stockapp
+
+runst:
+	cd ${folder} && streamlit run ${file}.py
+
 env:
 	venv\Scripts\activate
 
