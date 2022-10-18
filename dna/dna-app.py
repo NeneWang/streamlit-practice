@@ -90,6 +90,8 @@ df = pd.DataFrame.from_dict(X, orient='index')
 df = df.rename({0: 'count'}, axis='columns')
 df.reset_index(inplace=True)
 df = df.rename(columns = {'index':'nucleotide'})
+
+# Here you can display the df
 st.write(df)
 
 ### 4. Display Bar Chart using Altair
@@ -98,7 +100,10 @@ p = alt.Chart(df).mark_bar().encode(
     x='nucleotide',
     y='count'
 )
+
 p = p.properties(
     width=alt.Step(80)  # controls width of bar.
 )
+
+
 st.write(p)
