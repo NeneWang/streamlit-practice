@@ -1,5 +1,5 @@
 lmxl
 streamlit
 seaborn
-
+yfinance
 streamlit_plotly_events
